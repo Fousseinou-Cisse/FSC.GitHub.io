@@ -998,44 +998,30 @@ body > form .bouton:hover {
     transition: 0.3s;
 }
 
-/* ============================= */
-/* RESPONSIVE MOBILE (IMPORTANT) */
-/* ============================= */
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
 
-@media screen and (max-width: 768px) {
+/* Tablette + petits écrans */
+@media screen and (max-width: 1024px) {
 
-    /* permettre scroll global propre */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* NAVBAR en scroll horizontal */
     .navbar {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 10px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
     }
 
     .navbar ul {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 15px;
-        overflow-x: auto;
-        white-space: nowrap;
         margin-left: 0;
+        width: 100%;
     }
 
-    .navbar ul li a {
-        font-size: 16px;
-    }
-
-    /* barre de recherche plus petite */
     .rechercher input {
-        width: 180px;
+        width: 250px;
     }
 
-    /* ACCUEIL */
     .accueil {
         flex-direction: column;
         text-align: center;
@@ -1043,36 +1029,85 @@ body > form .bouton:hover {
         padding-top: 120px;
     }
 
+    .image {
+        margin-left: 0;
+    }
+
+    .image .img-box {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+    }
+
     .accueil-info h1 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .accueil-info h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .accueil-info p {
         font-size: 18px;
     }
+}
 
-    /* bouton CV */
+
+/* Téléphones */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 4%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .rechercher input {
+        width: 180px;
+        height: 35px;
+    }
+
+    .accueil {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 0;
+    }
+
+    .accueil-info h1 {
+        font-size: 32px;
+    }
+
+    .accueil-info h2 {
+        font-size: 20px;
+    }
+
+    .accueil-info p {
+        font-size: 16px;
+    }
+
     .tel-cv {
         font-size: 16px;
         padding: 10px 20px;
     }
 
-    /* IMAGE */
+    .icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .image .img-box {
         width: 250px;
         height: 250px;
-        padding: 20px;
-        margin-left: 0;
     }
 
-    /* CONTACT FORM */
+    /* formulaire */
     .sortie input,
     textarea {
-        width: 90%;
+        width: 90% !important;
         margin-left: 0;
     }
 
@@ -1080,100 +1115,48 @@ body > form .bouton:hover {
         width: 90%;
     }
 
-    /* FOOTER */
-    .footer-accueil,
-    .footer-contact,
-    .footer-about,
-    .footer-projets {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
-/* ============================= */
-/* FIX SCROLL HORIZONTAL GLOBAL */
-/* ============================= */
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Empêche tout dépassement */
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-/* Images responsives */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ============================= */
-/* MOBILE FIX AMÉLIORÉ */
-/* ============================= */
-
-@media screen and (max-width: 768px) {
-
-    /* NAVBAR */
-    .navbar {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .navbar ul {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-    }
-
-    /* SUPPRIME LES GROS MARGES QUI FONT DÉBORDER */
-    .image,
-    .presentation h2,
-    .about-propos h1,
-    .intérêt,
-    .Loisirs {
-        margin-left: 0 !important;
-    }
-
-    /* ACCUEIL */
-    .accueil {
-        flex-direction: column;
-        padding: 120px 5% 0;
-    }
-
-    /* IMAGE CENTRÉE */
-    .image .img-box {
-        margin-left: 0 !important;
-        width: 220px;
-        height: 220px;
-    }
-
-    /* FORMULAIRE */
-    .sortie input,
-    textarea {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
-
-    .bouton {
-        width: 100% !important;
-    }
-
-    /* VIDEOS */
-    .project-video,
-    .langage-video {
-        margin-left: 0 !important;
+    /* projets vidéos */
+    .project-video video,
+    .langage-video video {
         width: 100%;
     }
 
-    /* TITRES */
-    .Langage-C h2,
-    .sécurité h2 {
-        margin-left: 0 !important;
-        text-align: center;
+    .sécurité-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Très petits téléphones */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .accueil-info h1 {
+        font-size: 26px;
+    }
+
+    .accueil-info h2 {
+        font-size: 18px;
+    }
+
+    .accueil-info p {
+        font-size: 14px;
+    }
+
+    .tel-cv {
+        font-size: 14px;
+    }
+
+    .image .img-box {
+        width: 200px;
+        height: 200px;
     }
 }
