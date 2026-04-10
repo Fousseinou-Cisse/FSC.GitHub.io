@@ -1137,10 +1137,7 @@ body > form .bouton:hover {
     .footer-projets {
         flex-direction: column;
         text-align: center;
-    }
-}
-
-/* NAVBAR LINKS HORIZONTAUX SUR MOBILE */
+        /* NAVBAR LINKS HORIZONTAUX SUR MOBILE */
 .navbar ul {
     display: flex;
     flex-direction: row;   /* IMPORTANT */
@@ -1161,3 +1158,6 @@ body > form .bouton:hover {
     font-size: 14px;
     white-space: nowrap;
 }
+    }
+}
+
