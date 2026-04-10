@@ -998,119 +998,86 @@ body > form .bouton:hover {
     transition: 0.3s;
 }
 
+/* ============================= */
+/* RESPONSIVE MOBILE (IMPORTANT) */
+/* ============================= */
+
 @media screen and (max-width: 768px) {
 
+    /* permettre scroll global propre */
     body {
         overflow-x: hidden;
     }
 
-   
+    /* NAVBAR en scroll horizontal */
+    .navbar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 5%;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    /* barre de recherche plus petite */
+    .rechercher input {
+        width: 180px;
+    }
 
     /* ACCUEIL */
     .accueil {
         flex-direction: column;
         text-align: center;
         height: auto;
-        padding-top: 140px;
+        padding-top: 120px;
     }
 
     .accueil-info h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .accueil-info h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .accueil-info p {
+        font-size: 18px;
+    }
+
+    /* bouton CV */
+    .tel-cv {
         font-size: 16px;
+        padding: 10px 20px;
     }
 
     /* IMAGE */
-    .image {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-
     .image .img-box {
-        width: 200px;
-        height: 200px;
-        padding: 15px;
-        margin: 0;
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+        margin-left: 0;
     }
 
-    /* BOUTON */
-    .tel-cv {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    /* ICONES */
-    .icons {
-        justify-content: center;
-        margin-top: 20px;
-        flex-wrap: wrap;
-    }
-
-    /* FORMULAIRE */
+    /* CONTACT FORM */
     .sortie input,
     textarea {
-        width: 100% !important;
-        margin-left: 0 !important;
+        width: 90%;
+        margin-left: 0;
     }
 
     .bouton {
-        width: 100%;
-    }
-
-    body > form {
-        width: 95%;
-        margin: 10px auto;
-    }
-
-    /* TEXTES */
-    .presentation h2,
-    .about-propos h1,
-    .parcours h2,
-    .Loisirs h2,
-    .intérêt h2 {
-        font-size: 22px;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .presentation p,
-    .about-propos p,
-    .parcours p {
-        font-size: 15px;
-        margin-left: 0;
-        padding: 0 10px;
-    }
-
-    /* VIDÉO */
-    .project-video video,
-    .langage-video video {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .Langage-C h2,
-    .langage {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    /* IMAGES SÉCURITÉ */
-    .sécurité-image {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .sécurité-image img {
         width: 90%;
-        height: auto;
     }
 
     /* FOOTER */
@@ -1120,55 +1087,6 @@ body > form .bouton:hover {
     .footer-projets {
         flex-direction: column;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    /* NAVBAR FIXE */
-    .navbar {
-        flex-direction: row; /* IMPORTANT : horizontal */
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5%;
-    }
-
-    /* MENU HORIZONTAL */
-    .navbar ul {
-        display: flex;
-        flex-direction: row; /* reste horizontal */
-        gap: 12px;
-        margin-left: 0;
-        padding: 0;
-
-        /* si ça déborde sur petit écran */
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .navbar ul li {
-        margin-left: 0;
-    }
-
-    .navbar ul li a {
-        font-size: 14px; /* plus petit pour mobile */
-        padding: 5px 8px;
-    }
-
-    /* LOGO */
-    .logo {
-        font-size: 20px;
-    }
-
-    /* RECHERCHE (optionnel) */
-    .rechercher input {
-        width: 120px;
-        height: 30px;
-        font-size: 12px;
-    }
-
-    .rechercher button {
-        width: 30px;
-        height: 30px;
+        gap: 10px;
     }
 }
