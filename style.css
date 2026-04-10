@@ -1004,24 +1004,7 @@ body > form .bouton:hover {
         overflow-x: hidden;
     }
 
-    /* NAVBAR */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 5%;
-        position: fixed;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        padding-top: 10px;
-    }
-
-    .navbar ul li a {
-        font-size: 18px;
-    }
+   
 
     /* ACCUEIL */
     .accueil {
@@ -1137,9 +1120,10 @@ body > form .bouton:hover {
     .footer-projets {
         flex-direction: column;
         text-align: center;
-        
     }
-}@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
 
     /* NAVBAR FIXE */
     .navbar {
@@ -1188,5 +1172,3 @@ body > form .bouton:hover {
         height: 30px;
     }
 }
-
-
