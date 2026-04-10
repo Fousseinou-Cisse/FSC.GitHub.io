@@ -1137,27 +1137,56 @@ body > form .bouton:hover {
     .footer-projets {
         flex-direction: column;
         text-align: center;
-        /* NAVBAR LINKS HORIZONTAUX SUR MOBILE */
-.navbar ul {
-    display: flex;
-    flex-direction: row;   /* IMPORTANT */
-    flex-wrap: nowrap;     /* pas de retour à la ligne */
-    overflow-x: auto;      /* scroll horizontal si trop long */
-    gap: 15px;
-    width: 100%;
-    padding: 10px 0;
-}
+        
+    }
+}@media screen and (max-width: 768px) {
 
-/* éviter les marges qui cassent */
-.navbar ul li {
-    margin-left: 0;
-}
+    /* NAVBAR FIXE */
+    .navbar {
+        flex-direction: row; /* IMPORTANT : horizontal */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+    }
 
-/* taille des liens sur mobile */
-.navbar ul li a {
-    font-size: 14px;
-    white-space: nowrap;
-}
+    /* MENU HORIZONTAL */
+    .navbar ul {
+        display: flex;
+        flex-direction: row; /* reste horizontal */
+        gap: 12px;
+        margin-left: 0;
+        padding: 0;
+
+        /* si ça déborde sur petit écran */
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* plus petit pour mobile */
+        padding: 5px 8px;
+    }
+
+    /* LOGO */
+    .logo {
+        font-size: 20px;
+    }
+
+    /* RECHERCHE (optionnel) */
+    .rechercher input {
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .rechercher button {
+        width: 30px;
+        height: 30px;
     }
 }
+
 
