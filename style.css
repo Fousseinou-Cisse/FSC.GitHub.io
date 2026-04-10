@@ -1090,3 +1090,90 @@ body > form .bouton:hover {
         gap: 10px;
     }
 }
+/* ============================= */
+/* FIX SCROLL HORIZONTAL GLOBAL */
+/* ============================= */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Empêche tout dépassement */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================= */
+/* MOBILE FIX AMÉLIORÉ */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .navbar ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    /* SUPPRIME LES GROS MARGES QUI FONT DÉBORDER */
+    .image,
+    .presentation h2,
+    .about-propos h1,
+    .intérêt,
+    .Loisirs {
+        margin-left: 0 !important;
+    }
+
+    /* ACCUEIL */
+    .accueil {
+        flex-direction: column;
+        padding: 120px 5% 0;
+    }
+
+    /* IMAGE CENTRÉE */
+    .image .img-box {
+        margin-left: 0 !important;
+        width: 220px;
+        height: 220px;
+    }
+
+    /* FORMULAIRE */
+    .sortie input,
+    textarea {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .bouton {
+        width: 100% !important;
+    }
+
+    /* VIDEOS */
+    .project-video,
+    .langage-video {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    /* TITRES */
+    .Langage-C h2,
+    .sécurité h2 {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
