@@ -1053,22 +1053,36 @@ body > form .bouton:hover {
 }
 
 
-/* Téléphones */
+/* Téléphones (VERSION FUSIONNÉE + MENU HORIZONTAL) */
 @media screen and (max-width: 768px) {
 
     .navbar {
-        padding: 10px 4%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
     }
 
     .navbar ul {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;   /* MENU HORIZONTAL */
         gap: 10px;
-        width: 100%;
+        margin-left: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
     }
 
     .rechercher input {
-        width: 180px;
-        height: 35px;
+        width: 120px;
+        height: 30px;
     }
 
     .accueil {
@@ -1115,7 +1129,7 @@ body > form .bouton:hover {
         width: 90%;
     }
 
-    /* projets vidéos */
+    /* vidéos */
     .project-video video,
     .langage-video video {
         width: 100%;
@@ -1136,7 +1150,7 @@ body > form .bouton:hover {
     }
 
     .navbar ul li a {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .accueil-info h1 {
@@ -1159,38 +1173,4 @@ body > form .bouton:hover {
         width: 200px;
         height: 200px;
     }
-
-    /* MENU HORIZONTAL SUR MOBILE */
-@media screen and (max-width: 768px) {
-
-    .navbar {
-        flex-direction: row; /* reste horizontal */
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5%;
-    }
-
-    .navbar ul {
-        display: flex;
-        flex-direction: row;   /* IMPORTANT : horizontal */
-        gap: 10px;
-        margin-left: 0;
-        overflow-x: auto;      /* scroll si ça dépasse */
-        white-space: nowrap;
-    }
-
-    .navbar ul li {
-        margin-left: 0;
-    }
-
-    .navbar ul li a {
-        font-size: 14px;  /* plus petit pour mobile */
-    }
-
-    /* optionnel: cacher la recherche si ça bloque */
-    .rechercher input {
-        width: 120px;
-        height: 30px;
-    }
-}
 }
