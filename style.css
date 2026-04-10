@@ -1139,3 +1139,25 @@ body > form .bouton:hover {
         text-align: center;
     }
 }
+
+/* NAVBAR LINKS HORIZONTAUX SUR MOBILE */
+.navbar ul {
+    display: flex;
+    flex-direction: row;   /* IMPORTANT */
+    flex-wrap: nowrap;     /* pas de retour à la ligne */
+    overflow-x: auto;      /* scroll horizontal si trop long */
+    gap: 15px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* éviter les marges qui cassent */
+.navbar ul li {
+    margin-left: 0;
+}
+
+/* taille des liens sur mobile */
+.navbar ul li a {
+    font-size: 14px;
+    white-space: nowrap;
+}
